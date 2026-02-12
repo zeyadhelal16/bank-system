@@ -7,3 +7,6 @@ The main goal of this project is to demonstrate how a banking system works behin
 This project showcases full-stack development skills and highlights the integration between front-end design and back-end functionality to build a complete, working web application.
 
 
+![image alt](https://github.com/zeyadhelal16/bank-system/blob/265c4f5edb5f23fe0e22b235c8cdee1583feeb9f/image/Screenshot%202026-02-12%20164700.png)
+![image alt](https://github.com/zeyadhelal16/bank-system/blob/265c4f5edb5f23fe0e22b235c8cdee1583feeb9f/image/Screenshot%202026-02-12%20164823.png)
+![image alt](https://github.com/zeyadhelal16/bank-system/blob/265c4f5edb5f23fe0e22b235c8cdee1583feeb9f/image/Screenshot%202026-02-12%20164907.png)
