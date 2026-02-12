@@ -1,62 +1,9 @@
-# Bank System Project (HTML/CSS/JS + Node/Express + JSON)
+This Bank System is a full-stack web application designed to simulate real-world banking operations in a simple and practical way. The system allows users to create accounts, securely log in, check their balance, deposit money, withdraw funds, and transfer money to other users.
 
-This project includes:
-- Customer account creation
-- Employee account creation
-- Login for customer/employee
-- Deposit, withdraw, transfer, and balance checks
-- JSON file storage for customers, employees, and transactions
+The front-end of the application is built using HTML, CSS, and JavaScript, providing a clean and user-friendly interface. The back-end is developed with Node.js and Express, handling all server-side logic, account validation, and transaction processing. User data, including account details and transaction history, is stored using JSON to keep the system lightweight and easy to manage.
 
-## 1) Install
+The main goal of this project is to demonstrate how a banking system works behind the scenes, including authentication, balance management, and secure transaction handling. It reflects real-world concepts such as account verification, data persistence, and structured transaction records.
 
-```bash
-npm install
-```
+This project showcases full-stack development skills and highlights the integration between front-end design and back-end functionality to build a complete, working web application.
 
-## 2) Run
 
-```bash
-npm start
-```
-
-Server starts at:
-- `http://localhost:3000`
-
-## Data Storage
-
-All data is stored in:
-- `db/data.json`
-
-Schema:
-- `customers[]` (account + balance)
-- `employees[]`
-- `transactions[]`
-
-## Main API Routes
-
-Auth:
-- `POST /api/auth/register-customer`
-- `POST /api/auth/register-employee`
-- `POST /api/auth/login`
-- `POST /api/auth/logout`
-
-Account:
-- `GET /api/account/profile`
-- `GET /api/account/balance` (customer role)
-- `GET /api/account/transactions`
-
-Transactions:
-- `POST /api/transactions/deposit`
-- `POST /api/transactions/withdraw`
-- `POST /api/transactions/transfer`
-
-Employee tools:
-- `GET /api/customers`
-- `GET /api/customers/:accountId/balance`
-- `GET /api/employees`
-
-## Notes
-
-- Passwords are hashed with SHA-256 before storage.
-- Session tokens are in-memory (users must login again after server restart).
-- This is a starter project; for production use, add JWT/session store, stricter validation, and database-level transactions.
