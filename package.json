@@ -1,0 +1,20 @@
+{
+  "name": "bank-system-project",
+  "version": "1.0.0",
+  "description": "Simple bank system with account creation, login, employee tools, and JSON storage.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "bank",
+    "express",
+    "json"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

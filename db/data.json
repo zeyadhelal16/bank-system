@@ -1,0 +1,259 @@
+{
+  "customers": [
+    {
+      "id": "CUS1770903912037262",
+      "name": "zeyad",
+      "email": "zeyadhelal33@gmail.com",
+      "passwordHash": "17e572779d4093b99866f9436cf6f8532bee56a4c593241b137ab3af862fcd4b",
+      "balance": 110,
+      "createdAt": "2026-02-12T13:45:12.037Z"
+    },
+    {
+      "id": "CUS1770904203206939",
+      "name": "mory",
+      "email": "mory@47.com",
+      "passwordHash": "a05ac359cc665afe93e4a6d57d9bb3b47c0ae992c681b3b2696611891d0ab834",
+      "balance": 100,
+      "createdAt": "2026-02-12T13:50:03.206Z"
+    },
+    {
+      "id": "CUS1770905537886795",
+      "name": "alice",
+      "email": "alice-1770905537820@example.com",
+      "passwordHash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+      "balance": 85,
+      "createdAt": "2026-02-12T14:12:17.886Z"
+    },
+    {
+      "id": "CUS1770905537905889",
+      "name": "bob",
+      "email": "bob-1770905537897@example.com",
+      "passwordHash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+      "balance": 25,
+      "createdAt": "2026-02-12T14:12:17.905Z"
+    },
+    {
+      "id": "CUS1770905586813460",
+      "name": "alice",
+      "email": "alice-1770905586727@example.com",
+      "passwordHash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+      "balance": 80,
+      "createdAt": "2026-02-12T14:13:06.814Z"
+    },
+    {
+      "id": "CUS1770905586842390",
+      "name": "bob",
+      "email": "bob-1770905586834@example.com",
+      "passwordHash": "9b8769a4a742959a2d0298c36fb70623f2dfacda8436237df08d8dfd5b37374c",
+      "balance": 30,
+      "createdAt": "2026-02-12T14:13:06.842Z"
+    }
+  ],
+  "employees": [],
+  "transactions": [
+    {
+      "id": "TXN1770903912037355",
+      "type": "deposit",
+      "amount": 50,
+      "fromAccount": null,
+      "toAccount": "CUS1770903912037262",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770903912037262"
+      },
+      "createdAt": "2026-02-12T13:45:12.037Z"
+    },
+    {
+      "id": "TXN17709040131473",
+      "type": "deposit",
+      "amount": 100,
+      "fromAccount": null,
+      "toAccount": "CUS1770903912037262",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770903912037262"
+      },
+      "createdAt": "2026-02-12T13:46:53.147Z"
+    },
+    {
+      "id": "TXN1770904023316947",
+      "type": "withdraw",
+      "amount": 70,
+      "fromAccount": "CUS1770903912037262",
+      "toAccount": null,
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770903912037262"
+      },
+      "createdAt": "2026-02-12T13:47:03.316Z"
+    },
+    {
+      "id": "TXN1770904379866960",
+      "type": "deposit",
+      "amount": 30,
+      "fromAccount": null,
+      "toAccount": "CUS1770904203206939",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770904203206939"
+      },
+      "createdAt": "2026-02-12T13:52:59.866Z"
+    },
+    {
+      "id": "TXN1770905537886662",
+      "type": "deposit",
+      "amount": 100,
+      "fromAccount": null,
+      "toAccount": "CUS1770905537886795",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905537886795"
+      },
+      "createdAt": "2026-02-12T14:12:17.886Z"
+    },
+    {
+      "id": "TXN1770905537905928",
+      "type": "deposit",
+      "amount": 10,
+      "fromAccount": null,
+      "toAccount": "CUS1770905537905889",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905537905889"
+      },
+      "createdAt": "2026-02-12T14:12:17.905Z"
+    },
+    {
+      "id": "TXN1770905537921343",
+      "type": "transfer",
+      "amount": 15,
+      "fromAccount": "CUS1770905537886795",
+      "toAccount": "CUS1770905537905889",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905537886795"
+      },
+      "createdAt": "2026-02-12T14:12:17.921Z"
+    },
+    {
+      "id": "TXN1770905586817513",
+      "type": "deposit",
+      "amount": 100,
+      "fromAccount": null,
+      "toAccount": "CUS1770905586813460",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905586813460"
+      },
+      "createdAt": "2026-02-12T14:13:06.817Z"
+    },
+    {
+      "id": "TXN1770905586842962",
+      "type": "deposit",
+      "amount": 10,
+      "fromAccount": null,
+      "toAccount": "CUS1770905586842390",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905586842390"
+      },
+      "createdAt": "2026-02-12T14:13:06.842Z"
+    },
+    {
+      "id": "TXN1770905586866735",
+      "type": "transfer",
+      "amount": 15,
+      "fromAccount": "CUS1770905586813460",
+      "toAccount": "CUS1770905586842390",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905586813460"
+      },
+      "createdAt": "2026-02-12T14:13:06.866Z"
+    },
+    {
+      "id": "TXN1770905586877888",
+      "type": "transfer",
+      "amount": 5,
+      "fromAccount": "CUS1770905586813460",
+      "toAccount": "CUS1770905586842390",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770905586813460"
+      },
+      "createdAt": "2026-02-12T14:13:06.877Z"
+    },
+    {
+      "id": "TXN1770906083153742",
+      "type": "transfer",
+      "amount": 20,
+      "fromAccount": "CUS1770903912037262",
+      "toAccount": "CUS1770904203206939",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770903912037262"
+      },
+      "createdAt": "2026-02-12T14:21:23.153Z"
+    },
+    {
+      "id": "TXN1770906112674823",
+      "type": "transfer",
+      "amount": 50,
+      "fromAccount": "CUS1770904203206939",
+      "toAccount": "CUS1770903912037262",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770904203206939"
+      },
+      "createdAt": "2026-02-12T14:21:52.674Z"
+    },
+    {
+      "id": "TXN1770906129709599",
+      "type": "transfer",
+      "amount": 110,
+      "fromAccount": "CUS1770903912037262",
+      "toAccount": "CUS1770904203206939",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770903912037262"
+      },
+      "createdAt": "2026-02-12T14:22:09.709Z"
+    },
+    {
+      "id": "TXN1770906157207615",
+      "type": "transfer",
+      "amount": 55,
+      "fromAccount": "CUS1770904203206939",
+      "toAccount": "CUS1770903912037262",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770904203206939"
+      },
+      "createdAt": "2026-02-12T14:22:37.207Z"
+    },
+    {
+      "id": "TXN1770907692015667",
+      "type": "transfer",
+      "amount": 55,
+      "fromAccount": "CUS1770904203206939",
+      "toAccount": "CUS1770903912037262",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770904203206939"
+      },
+      "createdAt": "2026-02-12T14:48:12.015Z"
+    },
+    {
+      "id": "TXN1770907714737236",
+      "type": "deposit",
+      "amount": 100,
+      "fromAccount": null,
+      "toAccount": "CUS1770904203206939",
+      "performedBy": {
+        "role": "customer",
+        "id": "CUS1770904203206939"
+      },
+      "createdAt": "2026-02-12T14:48:34.737Z"
+    }
+  ]
+}

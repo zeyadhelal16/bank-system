@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <h1>Bank System</h1>
+        <p>Customer and Employee Banking Portal</p>
+      </header>
+
+      <section class="card auth-card" id="authCard">
+        <div style="max-width:420px;margin:0 auto;">
+          <form id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <label>
+              Role
+              <select name="role" required>
+                <option value="customer">Customer</option>
+                <option value="employee">Employee</option>
+              </select>
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" required />
+            </label>
+            <button type="submit">Login</button>
+          </form>
+          <p style="text-align:center;margin-top:0.6rem;">
+            <a href="#" id="showRegisterNoEmail">Create customer account (no email)</a>
+          </p>
+
+          <form id="registerNoEmailForm" class="login-form hidden" style="margin-top:0.5rem;">
+            <h2>Create Customer (no email)</h2>
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email (optional)
+              <input type="email" name="email" placeholder="leave blank to skip" />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" required />
+            </label>
+            <label>
+              Initial Deposit
+              <input type="number" name="initialDeposit" value="0" min="0" step="0.01" />
+            </label>
+            <div style="display:flex;gap:8px;">
+              <button type="submit">Create & Login</button>
+              <button id="cancelRegister" type="button" style="background:#e5e7eb;color:var(--text);">Back</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="card dashboard hidden" id="dashboard">
+        <div class="dashboard-head">
+          <div>
+            <h2>Dashboard</h2>
+            <p id="userMeta"></p>
+          </div>
+          <button id="logoutBtn" class="btn-danger">Logout</button>
+        </div>
+
+        <div id="customerPanel" class="hidden">
+          <div class="status-row">
+            <p><strong>Account ID:</strong> <span id="customerId">-</span></p>
+            <p><strong>Balance:</strong> $<span id="customerBalance">0.00</span></p>
+            <button id="refreshCustomerData">Refresh</button>
+          </div>
+
+          <div class="grid-three">
+            <form id="depositForm">
+              <h3>Deposit</h3>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0.01" step="0.01" required />
+              </label>
+              <button type="submit">Deposit</button>
+            </form>
+
+            <form id="withdrawForm">
+              <h3>Withdraw</h3>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0.01" step="0.01" required />
+              </label>
+              <button type="submit">Withdraw</button>
+            </form>
+
+            <form id="transferForm">
+              <h3>Transfer</h3>
+              <label>
+                To Account ID
+                <input type="text" name="toAccountId" required />
+              </label>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0.01" step="0.01" required />
+              </label>
+              <button type="submit">Transfer</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="employeePanel" class="hidden">
+          <div class="status-row">
+            <p>Employee can run transactions for any customer account.</p>
+            <div>
+              <button id="refreshCustomers">Refresh Customers</button>
+              <button id="refreshEmployees">Refresh Employees</button>
+            </div>
+          </div>
+
+          <div class="grid-three">
+            <form id="employeeBalanceForm">
+              <h3>Check Customer Balance</h3>
+              <label>
+                Account ID
+                <input type="text" name="accountId" required />
+              </label>
+              <button type="submit">Check Balance</button>
+              <p><strong>Result:</strong> <span id="checkedBalanceResult">-</span></p>
+            </form>
+
+            <form id="employeeDepositForm">
+              <h3>Employee Deposit</h3>
+              <label>
+                Account ID
+                <input type="text" name="accountId" required />
+              </label>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0.01" step="0.01" required />
+              </label>
+              <button type="submit">Deposit</button>
+            </form>
+
+            <form id="employeeWithdrawForm">
+              <h3>Employee Withdraw</h3>
+              <label>
+                Account ID
+                <input type="text" name="accountId" required />
+              </label>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0.01" step="0.01" required />
+              </label>
+              <button type="submit">Withdraw</button>
+            </form>
+
+            <form id="employeeTransferForm">
+              <h3>Employee Transfer</h3>
+              <label>
+                From Account ID
+                <input type="text" name="fromAccountId" required />
+              </label>
+              <label>
+                To Account ID
+                <input type="text" name="toAccountId" required />
+              </label>
+              <label>
+                Amount
+                <input type="number" name="amount" min="0.01" step="0.01" required />
+              </label>
+              <button type="submit">Transfer</button>
+            </form>
+          </div>
+
+          <div class="table-wrap">
+            <h3>Customer Accounts</h3>
+            <table id="customersTable">
+              <thead>
+                <tr>
+                  <th>Account ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="table-wrap">
+            <h3>Employees</h3>
+            <table id="employeesTable">
+              <thead>
+                <tr>
+                  <th>Employee ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Department</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <h3>Transactions</h3>
+          <button id="refreshTransactions">Refresh Transactions</button>
+          <table id="transactionsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>From</th>
+                <th>To</th>
+                <th>By</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <p id="statusMessage" class="status"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

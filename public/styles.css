@@ -1,0 +1,177 @@
+:root {
+  --bg: #f4f7fa;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --primary: #0b5ed7;
+  --primary-hover: #0a53be;
+  --danger: #b42318;
+  --danger-hover: #912018;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #edf2f7 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.app {
+  width: min(1200px, 92vw);
+  margin: 2rem auto;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.top p {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(16, 24, 40, 0.04);
+}
+
+.auth-card,
+.dashboard {
+  margin-top: 1rem;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+form {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.login-form {
+  margin-top: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.dashboard-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.status-row > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.table-wrap {
+  margin-top: 1rem;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.55rem;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+th {
+  background: #f9fafb;
+}
+
+.status {
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .grid-two,
+  .grid-three {
+    grid-template-columns: 1fr;
+  }
+}
